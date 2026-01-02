@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>🎓 SMS Dashboard</h2>
+  <a href="#">Dashboard</a>
+  <a href="#">Students</a>
+  <a href="#">Departments</a>
+  <a href="#">Attendance</a>
+  <a href="#">Exams</a>
+  <a href="#">Settings</a>
+</div>
+
+<div class="main">
+  <div class="title">Student Management</div>
+
+  <div class="search-box">
+    🔍 <input type="text" id="search" placeholder="Search students...">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Dept</th>
+        <th>Year</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody id="student-table"></tbody>
+  </table>
+</div>
+
+<!-- Add Button -->
+<div class="add-btn" onclick="openModal()">+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="modal-title">Add Student</h3>
+
+    <input type="text" id="roll" placeholder="Roll No">
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="dept" placeholder="Department">
+    <input type="text" id="year" placeholder="Year">
+    <input type="text" id="email" placeholder="Email">
+
+    <button onclick="saveStudent()">Save</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
